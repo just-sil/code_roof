@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeRoof — learn to code, all under one roof</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><style>.h{stroke:%23241C16}@media(prefers-color-scheme:dark){.h{stroke:%23EFEAE0}}</style><path class='h' d='M10 27 L32 8 L54 27 V54 H10 Z' fill='none' stroke-width='7' stroke-linejoin='round'/><path d='M22 41 H42' fill='none' stroke='%23C2472B' stroke-width='7' stroke-linecap='round'/></svg>">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-label="CodeRoof">
+        <path d="M10 27 L32 8 L54 27 V54 H10 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M19 34 L27 41 L19 48" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="logo-cursor" d="M33 48 H45" fill="none" stroke="var(--brand)" stroke-width="4.5" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <div class="brand-name">code<span class="roof">roof</span></div>
+        <div class="brand-tag">everything a beginner needs</div>
+      </div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span id="progress-text">0% complete</span></div>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+    </div>
+    <nav class="nav" id="nav"><!-- built by app.js --></nav>
+    <div class="sidebar-foot">
+      <button class="btn-ghost" id="reset-progress">Reset progress</button>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <div class="main">
+    <header class="topbar">
+      <button class="icon-btn" id="menu-btn" title="Toggle menu">☰</button>
+      <div class="topbar-title" id="topbar-title">Welcome</div>
+      <div class="topbar-right">
+        <span class="py-status" id="py-status" hidden>loading Python…</span>
+        <button class="btn-term" id="toggle-term">▣ Terminal</button>
+      </div>
+    </header>
+
+    <main class="content" id="content"><!-- lesson renders here --></main>
+
+    <!-- ============ TERMINAL PANEL ============ -->
+    <section class="term-panel" id="term-panel" hidden>
+      <div class="term-head">
+        <div class="term-dots"><i></i><i></i><i></i></div>
+        <span class="term-title">practice terminal — try <code>help</code></span>
+        <button class="icon-btn term-close" id="term-close">✕</button>
+      </div>
+      <div class="term-body" id="term-body">
+        <div class="term-out" id="term-out"></div>
+        <div class="term-input-row">
+          <span class="term-prompt" id="term-prompt"></span>
+          <input class="term-input" id="term-input" autocomplete="off" spellcheck="false" autocapitalize="off">
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+
+<script src="lessons.js"></script>
+<script src="terminal.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
