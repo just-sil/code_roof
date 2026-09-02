@@ -152,6 +152,10 @@ body {
   background: none; border: none; color: var(--faint); font-size: .75rem;
   cursor: pointer; font-family: inherit;
 }
+.dev-ghost {
+  background: none; border: none; color: var(--faint); font-size: .75rem;
+  cursor: pointer; font-family: inherit;
+}
 .btn-ghost:hover { color: var(--accent); }
 
 /* ============ Main / topbar ============ */
